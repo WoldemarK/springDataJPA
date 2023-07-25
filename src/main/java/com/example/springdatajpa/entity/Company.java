@@ -25,10 +25,10 @@ public class Company implements BaseEntity<Long> {
 
     @Builder.Default
     @ElementCollection
-    @MapKeyColumn(name = "long")
+    @MapKeyColumn(name = "lang")
     @Column(name = "description")
-    @CollectionTable(name = "company_localesl",
+    @CollectionTable(name = "company_locales",
             joinColumns = @JoinColumn(name = "company_id"))
-    public Map<String, String> localesl = new HashMap<>();
+    public Map<String, String> locales = new HashMap<>();
 
 }
